@@ -22,8 +22,8 @@ function update() {
     tickNum += 1
     playMetronone()
     playSnareDrum()
-
-
+    playHiHat()
+    playKick()
 
     console.log(tickNum)
 
@@ -56,6 +56,19 @@ function playSnareDrum() {
     }
 }
 
+function playHiHat() {
+    let playMe = document.getElementById('hihat-checkbox')
+    if (playMe.checked) {
+        hihat.play();
+    }
+}
+
+function playKick() {
+    let playMe = document.getElementById('kickdrum-checkbox')
+    if (playMe.checked) {
+        kick.play();
+    }
+}
 // soundSelector function decides which items are check in the options section and passes them to the beat/metronome area.
 
 // gather boxes into something
