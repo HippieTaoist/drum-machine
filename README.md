@@ -1,6 +1,6 @@
 # Drum machine
 
-In this project, you'll be creating a drum machine that runs in the browser! 
+In this project, you'll be creating a drum machine that runs in the browser!
 
 Check out the starting point for this project here: https://ci-wdi-900.github.io/drum-machine/
 
@@ -50,7 +50,7 @@ Now that we have custom instruments, lets allow users of our drum machine to cho
 
 #### 3A: Adding inputs
 
-Next to each checkbox (excluding "metronome"), add a number input. 
+Next to each checkbox (excluding "metronome"), add a number input.
 
 #### 3B: Customizing instrument timing
 
