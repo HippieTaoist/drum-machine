@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Metronome</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <div class="tip">
         (Click anywhere to hear sound...)
@@ -21,6 +23,56 @@
         <div class="arm"></div>
     </div>
 
+
+    <div id="counter-area">
+
+    </div>
+
+    <section class="options">
+        <div id="metronome">
+            <label for="metronome">
+                Play Metronome
+                <input type="checkbox" id="metronome-checkbox" name="playSound" value="metronome" checked>
+            </label>
+            <br>
+            <label for="metro-counter">metro Count
+                <input type="number" min='1' max='4' id="metro-count" name="metro-counter" value="1">
+            </label>
+        </div>
+        <div id="snaredrum">
+            <label for="snaredrum">Play Snare Drum
+                <input type="checkbox" id="snaredrum-checkbox" name="playSound" value="snaredrum">
+
+            </label>
+            <br>
+            <label for="snare-counter">snare Count
+                <input type="number" min='1' max='4' id="snare-count" name="snare-counter" value="1">
+            </label>
+        </div>
+        <div id="hihat">
+            <label for="hihat">Play Hi-Hat Drum
+                <input type="checkbox" id="hihat-checkbox" name="playSound" value="hihat">
+                <br>
+            </label>
+            <label for="hihat-counter">hihat Count
+                <input type="number" min='1' max='4' id="hihat-count" name="hihat-counter" value="1">
+            </label>
+        </div>
+
+        <div id="kick">
+            <label for="kick">Play Kick Drum
+                <input type="checkbox" id="kickdrum-checkbox" name="playSound" value="kick">
+                <br>
+            </label>
+            <label for="kick-counter">KD Count
+                <input type="number" min='1' max='4' id="kick-count" name="kick-counter" value="1">
+            </label>
+        </div>
+    </section>
+
     <script src="main.js"></script>
+
+    <div></div>
 </body>
+
 </html>
