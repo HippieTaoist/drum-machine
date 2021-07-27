@@ -40,10 +40,12 @@ function playMetronone() {
     let playMe = document.getElementById('metronome-checkbox')
     if (playMe.checked) {
         if (tickNum < 4) {
+            tick.load();
             tick.play()
         }
         // Play the 'tock' sound
         if (tickNum === 4) {
+            tock.load();
             tock.play();
         }
     }
@@ -51,14 +53,20 @@ function playMetronone() {
 
 function playSnareDrum() {
     let playMe = document.getElementById('snaredrum-checkbox')
+    // let onBeat = document.getElementById('kickdrum-beat')
+    // onbeat.addEventListener('change', function ())
     if (playMe.checked) {
+        // if (onBeat.value === tickNum) {
+        snare.load()
         snare.play();
+        // }
     }
 }
 
 function playHiHat() {
     let playMe = document.getElementById('hihat-checkbox')
     if (playMe.checked) {
+        hihat.load();
         hihat.play();
     }
 }
@@ -66,9 +74,17 @@ function playHiHat() {
 function playKick() {
     let playMe = document.getElementById('kickdrum-checkbox')
     if (playMe.checked) {
+        kick.load();
         kick.play();
     }
 }
+
+// playOnBeat function plays the sound on beat choosen in real time without need for an enter selection.
+// function playOnBeat(input) {
+//     input.oninput =
+
+// }
+
 // soundSelector function decides which items are check in the options section and passes them to the beat/metronome area.
 
 // gather boxes into something
