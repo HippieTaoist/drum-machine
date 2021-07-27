@@ -12,14 +12,22 @@ let counterArea = document.getElementById('counter-area');
 let tickNum = 0;
 let counterNum = 1
 
+// set drum-count beats for instruments
+let metroBeat = document.getElementById('metro-count')
+let snareBeat = document.getElementById('snare-count')
+let hihatBeat = document.getElementById('hihat-count')
+let kickBeat = document.getElementById('kick-count')
+
 // +++++FUNCTIONS++++++++++++++++
 // This function is called every 600ms
 function update() {
+    console.log(kickBeat.value)
     if (tickNum === 4) {
         tickNum = 0
         counterNum = tickNum + 1
     }
     tickNum += 1
+    checkSetBeat()
     playMetronone()
     playSnareDrum()
     playHiHat()
@@ -56,45 +64,40 @@ function playSnareDrum() {
     // let onBeat = document.getElementById('kickdrum-beat')
     // onbeat.addEventListener('change', function ())
     if (playMe.checked) {
-        // if (onBeat.value === tickNum) {
-        snare.load()
-        snare.play();
-        // }
+        if (Number(snareBeat.value) === tickNum) {
+            snare.load()
+            snare.play();
+        }
     }
 }
 
 function playHiHat() {
     let playMe = document.getElementById('hihat-checkbox')
     if (playMe.checked) {
-        hihat.load();
-        hihat.play();
+        if (Number(hihatBeat.value) === tickNum) {
+            hihat.load();
+            hihat.play();
+        }
     }
 }
 
 function playKick() {
     let playMe = document.getElementById('kickdrum-checkbox')
     if (playMe.checked) {
-        kick.load();
-        kick.play();
+        if (Number(kickBeat.value) === tickNum) {
+            kick.load();
+            kick.play();
+        }
     }
 }
 
-// playOnBeat function plays the sound on beat choosen in real time without need for an enter selection.
-// function playOnBeat(input) {
-//     input.oninput =
-
-// }
-
-// soundSelector function decides which items are check in the options section and passes them to the beat/metronome area.
-
-// gather boxes into something
-let playSound = document.querySelectorAll('input[name=soundPlay]')
-console.log(playSound)
-
-let snareSound = snare.play()
-
-function soundSelector() {
-
+// checkSetBeat function plays the sound on beat choosen in real time without need for an enter selection.
+function checkSetBeat() {
+    metroBeat = document.getElementById('metro-count')
+    snareBeat = document.getElementById('snare-count')
+    hihatBeat = document.getElementById('hihat-count')
+    kickBeat = document.getElementById('kick-count')
+    // let Beat = document.getElementById('-count')
 
 
 }
